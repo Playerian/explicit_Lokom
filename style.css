@@ -1,0 +1,12 @@
+#canvasDiv{
+    max-width: 1080px;
+    max-height: 1920px;
+    border: solid;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#canvas{
+    position:relative;
+    pointer-events: none;
+}
