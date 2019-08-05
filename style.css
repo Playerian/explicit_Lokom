@@ -10,3 +10,7 @@
     position:relative;
     pointer-events: none;
 }
+
+#preLoad{
+    visibility: hidden;
+}

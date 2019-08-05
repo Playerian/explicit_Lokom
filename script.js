@@ -54,14 +54,14 @@ class Camera{
 
 class Game{
     constructor(){
-
+        this.map = new Map();
     }
 }
 
 class Map{
     constructor(){
         //draw map background
-        
+        ctx.drawImage(document.getElementById("bgImage"), 0, 0);
         //stuff
         this.image = new Image();
     	this.image.src = ctx.canvas.toDataURL("image/png");
@@ -106,5 +106,10 @@ class Map{
     }
 }
 
+//canvas init
+var c = document.getElementById("canvas");
+var $canvas = $('#canvasDiv');
+var ctx = c.getContext("2d");
 //init
 let camera = new Camera();
+let game = new Game();
