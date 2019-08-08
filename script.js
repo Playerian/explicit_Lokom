@@ -61,7 +61,7 @@ class Game{
 class Map{
     constructor(){
         //draw map background
-        ctx.drawImage(document.getElementById("bgImage"), 0, 0);
+        ctx.drawImage($bg[0], 0, 0);
         //stuff
         this.image = new Image();
     	this.image.src = ctx.canvas.toDataURL("image/png");
@@ -108,8 +108,18 @@ class Map{
 
 //canvas init
 var c = document.getElementById("canvas");
-var $canvas = $('#canvasDiv');
 var ctx = c.getContext("2d");
+//jquery
+var $canvas = $('#canvasDiv');
+//image
+var $bg = $("#bgImage");
 //init
 let camera = new Camera();
 let game = new Game();
+
+//timer
+setInterval(function(){
+    //fix width height
+    $canvas.css("height", window.innerHeight);
+    $canvas.css("width", window.innerWidth);
+}, 100);

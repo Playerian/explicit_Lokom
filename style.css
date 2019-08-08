@@ -1,3 +1,7 @@
+body{
+    overflow:hidden;
+}
+
 #canvasDiv{
     max-width: 1080px;
     max-height: 1920px;
